@@ -64,6 +64,7 @@ class App {
         $u = "{$_SERVER['REQUEST_URI']}";
         //trims the trailing forward slash (rtrim), sanitizes URL, explode it by forward slash to get elements
         $url = explode('/', filter_var(rtrim($u, '/'), FILTER_SANITIZE_URL));
+        //print_r($url); die;
 		unset($url[0]);
 		return $url;
     }
